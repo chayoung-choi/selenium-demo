@@ -12,6 +12,17 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
+/**
+ * https://selenide.org/documentation/screenshots.html
+ * 자동 스크린샷은 shouldBe 실패 경우 지원
+ * @ExtendWith({ScreenShooterExtension.class}) 설정 시 : shouldBe, assertEquals, assertThat의 실패 경우 지원(Allure 자동 첨부파일 안됨)
+ */
+/**
+ * * 테스트 순서 지정
+ * @TestMethodOrder(value = MethodOrderer.OrderAnnotation.class)
+ * @Order(1)
+ */
+
 public class MainPageTest {
   MainPage mainPage = new MainPage();
 
